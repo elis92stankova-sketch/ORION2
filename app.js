@@ -1,5 +1,6 @@
 const slides = window.GAME_SLIDES || [];
-const HOME_PATH = "/";
+const GAME_ROUTE_SEGMENTS = ["sepoty-stromu", "digitalni-past"];
+const HOME_PATH = getAppBasePath();
 const HOME_STORAGE_KEY = "orion_static_state_home";
 const GAMES = [
   {
@@ -41,9 +42,24 @@ function normalizePath(path) {
   return decoded.length > 1 ? decoded.replace(/\/$/, "") : decoded;
 }
 
+function getAppBasePath(path = window.location.pathname) {
+  const pathOnly = String(path || "/").split(/[?#]/)[0];
+  const parts = pathOnly.split("/").filter(Boolean);
+  const last = parts.at(-1) || "";
+  const baseParts = GAME_ROUTE_SEGMENTS.includes(last) || last.includes(".") ? parts.slice(0, -1) : parts;
+  return baseParts.length ? `/${baseParts.join("/")}/` : "/";
+}
+
+function appPath(path = "") {
+  return `${HOME_PATH}${String(path).replace(/^\/+/, "")}`;
+}
+
 function gameByPath(path = window.location.pathname) {
   const normalized = normalizePath(path);
-  return GAMES.find((game) => [game.path, ...game.aliases].map(normalizePath).includes(normalized)) || null;
+  return GAMES.find((game) => {
+    const candidates = [game.path, appPath(game.path), ...game.aliases, ...game.aliases.map(appPath)];
+    return candidates.map(normalizePath).includes(normalized);
+  }) || null;
 }
 
 function resolveAssetUrl(value) {
@@ -107,7 +123,7 @@ function setPath(path, replace = false) {
 function syncRouteForSlide(slide) {
   const game = gameBySlideId(slide.id);
   if (game) {
-    setPath(game.path, true);
+    setPath(appPath(game.path), true);
   } else {
     setPath(HOME_PATH, true);
   }
@@ -117,7 +133,7 @@ function startGame(startSlideId) {
   const game = gameBySlideId(startSlideId);
   if (!game) return;
   const startIndex = indexForSlideId(startSlideId);
-  setPath(game.path);
+  setPath(appPath(game.path));
   state = emptyState(startIndex);
   localSelection = null;
   hintUsage = {};
