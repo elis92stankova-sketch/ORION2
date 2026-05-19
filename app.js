@@ -46,6 +46,14 @@ function gameByPath(path = window.location.pathname) {
   return GAMES.find((game) => [game.path, ...game.aliases].map(normalizePath).includes(normalized)) || null;
 }
 
+function resolveAssetUrl(value) {
+  const url = String(value || "");
+  if (!url || url === "DOPLNIT_URL" || url === "#") return url;
+  if (/^(https?:|data:|mailto:|tel:|\/)/i.test(url)) return url;
+  if (!url.startsWith("assets/")) return url;
+  return gameByPath() ? `../${url}` : url;
+}
+
 function gameBySlideId(id) {
   return GAMES.find((game) => id >= game.startId && id <= game.endId) || null;
 }
@@ -316,7 +324,7 @@ function header(label) {
 function renderChoice(slide) {
   const choicesHtml = slide.choices.map((choice, index) => `
     <div class="choice-box choice-box-${index === 0 ? "green" : "blue"}" data-choice="${index}">
-      <img src="${choice.image}" alt="Volba ${index + 1}" class="choice-image">
+      <img src="${escapeHtml(resolveAssetUrl(choice.image))}" alt="Volba ${index + 1}" class="choice-image">
       <p class="choice-label">${escapeHtml(choice.label)}</p>
     </div>
   `).join('');
@@ -339,7 +347,7 @@ function renderIntro(slide) {
       <div class="meta">${escapeHtml(slide.caseNumber || "Případ № 2254578/2026")}</div>
     </header>
     <div class="video-box">${videoContent(slide.videoId)}</div>
-    ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(slide.audioUrl)}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
+    ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(resolveAssetUrl(slide.audioUrl))}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
     <div class="case-grid terminal-panel">
       <p><span>Případ:</span> <strong>${escapeHtml(slide.caseName || "Šepoty stromů")}</strong></p>
       <p><span>Stupeň utajení:</span> <strong class="warning-text">${escapeHtml(slide.classification || "Přísně tajné")}</strong></p>
@@ -360,7 +368,7 @@ function renderChapter(slide) {
       ${slide.warning ? `<div class="chapter-warning-box"><strong>Varování</strong><span>${escapeHtml(slide.warning)}</span></div>` : ""}
       ${slide.note ? `<div class="chapter-note-box"><strong>Poznámka</strong><span>${escapeHtml(slide.note)}</span></div>` : ""}
       <div class="chapter-video video-box">${videoContent(slide.videoId)}</div>
-      ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(slide.audioUrl)}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
+      ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(resolveAssetUrl(slide.audioUrl))}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
       <div class="actions"><button class="primary-btn" data-next>${escapeHtml(slide.buttonText || "Pokračovat")}</button></div>
     </div>
   `;
@@ -370,7 +378,7 @@ function renderVideo(slide) {
   return `
     ${header("Video záznam")}
     <div class="video-box">${videoContent(slide.videoId)}</div>
-    ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(slide.audioUrl)}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
+    ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(resolveAssetUrl(slide.audioUrl))}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
     <div class="actions"><button class="primary-btn" data-next>${escapeHtml(slide.buttonText || "Pokračovat")}</button></div>
   `;
 }
@@ -379,7 +387,7 @@ function renderAudio(slide) {
   return `
     ${header("Audio stopa")}
     <div class="audio-message-box terminal-panel">
-      <button class="primary-btn audio-listen-btn" type="button" data-audio-message ${slide.audioUrl ? `data-audio-src="${escapeHtml(slide.audioUrl)}"` : ""}>${escapeHtml(slide.listenButtonText || "Poslechnout vzkaz od historika Tomáše Havelky")}</button>
+      <button class="primary-btn audio-listen-btn" type="button" data-audio-message ${slide.audioUrl ? `data-audio-src="${escapeHtml(resolveAssetUrl(slide.audioUrl))}"` : ""}>${escapeHtml(slide.listenButtonText || "Poslechnout vzkaz od historika Tomáše Havelky")}</button>
       <div class="audio-visualizer" aria-hidden="true">
         <canvas data-audio-wave width="760" height="128"></canvas>
       </div>
@@ -391,12 +399,12 @@ function renderAudio(slide) {
 }
 
 function renderInterlude(slide) {
-  const linkUrl = slide.link?.url && slide.link.url !== "DOPLNIT_URL" ? slide.link.url : "#";
+  const linkUrl = slide.link?.url && slide.link.url !== "DOPLNIT_URL" ? resolveAssetUrl(slide.link.url) : "#";
   const extraAudioMessages = slide.extraAudioMessages || [];
   return `
     ${header("Záznam vyšetřovatele")}
     <div class="audio-message-box terminal-panel">
-      <button class="primary-btn audio-listen-btn" type="button" data-audio-message ${slide.audioUrl ? `data-audio-src="${escapeHtml(slide.audioUrl)}"` : ""}>Poslechnout vzkaz od detektiva</button>
+      <button class="primary-btn audio-listen-btn" type="button" data-audio-message ${slide.audioUrl ? `data-audio-src="${escapeHtml(resolveAssetUrl(slide.audioUrl))}"` : ""}>Poslechnout vzkaz od detektiva</button>
       <div class="audio-visualizer" aria-hidden="true">
         <canvas data-audio-wave width="760" height="128"></canvas>
       </div>
@@ -404,7 +412,7 @@ function renderInterlude(slide) {
     </div>
     ${extraAudioMessages.map((audio) => `
       <div class="audio-message-box terminal-panel">
-        <button class="primary-btn audio-listen-btn" type="button" data-audio-message ${audio.audioUrl ? `data-audio-src="${escapeHtml(audio.audioUrl)}"` : ""}>${escapeHtml(audio.listenButtonText || "Poslechnout vzkaz")}</button>
+        <button class="primary-btn audio-listen-btn" type="button" data-audio-message ${audio.audioUrl ? `data-audio-src="${escapeHtml(resolveAssetUrl(audio.audioUrl))}"` : ""}>${escapeHtml(audio.listenButtonText || "Poslechnout vzkaz")}</button>
         <div class="audio-visualizer" aria-hidden="true">
           <canvas data-audio-wave width="760" height="128"></canvas>
         </div>
@@ -429,7 +437,8 @@ function renderInterlude(slide) {
 
 function renderConditionalInterlude(slide) {
   const picked = state.answers[slide.conditionSlideId];
-  const audioUrl = slide.conditionalAudioUrls?.[picked] || slide.audioUrl || "";
+  const audioUrl = resolveAssetUrl(slide.conditionalAudioUrls?.[picked] || slide.audioUrl || "");
+  const linkUrl = slide.link?.url && slide.link.url !== "DOPLNIT_URL" ? resolveAssetUrl(slide.link.url) : "#";
   return `
     ${header("Podmíněný záznam")}
     <div class="audio-message-box terminal-panel">
@@ -439,7 +448,7 @@ function renderConditionalInterlude(slide) {
       </div>
       <div class="audio-status" data-audio-status>Zvukový záznam připraven</div>
     </div>
-    ${slide.link ? `<div class="case-link-slot"><a class="case-link" href="${escapeHtml(slide.link.url)}" target="_blank" rel="noreferrer">${escapeHtml(slide.link.label)}</a></div>` : ""}
+    ${slide.link ? `<div class="case-link-slot"><a class="case-link" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer">${escapeHtml(slide.link.label)}</a></div>` : ""}
     <div class="actions"><button class="primary-btn" data-next>Pokračovat</button></div>
   `;
 }
@@ -454,11 +463,11 @@ function renderConclusion(slide) {
         ${slide.hideConclusionDetail ? "" : "<span>Rekonstrukce pr?chodu je dokon?ena.</span>"}
       </div>
       <div class="conclusion-video video-box">${videoContent(slide.videoId)}</div>
-      ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(slide.audioUrl)}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
+      ${slide.audioUrl ? `<div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(resolveAssetUrl(slide.audioUrl))}">Detektiv audio</button></div><div class="audio-status" data-audio-status></div>` : ""}
       ${slide.songAudioUrl ? `
         <div class="conclusion-song">
           <div class="music-note" aria-hidden="true">♫</div>
-          <div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(slide.songAudioUrl)}">${escapeHtml(slide.songButtonText || "Poslechnout")}</button></div>
+          <div class="actions"><button class="primary-btn audio-listen-btn" type="button" data-audio-message data-audio-src="${escapeHtml(resolveAssetUrl(slide.songAudioUrl))}">${escapeHtml(slide.songButtonText || "Poslechnout")}</button></div>
           <div class="audio-status" data-audio-status></div>
         </div>
       ` : ""}
