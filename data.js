@@ -26,7 +26,7 @@ window.GAME_SLIDES = [
         classification: "Přísně tajné",
         location: "Podlesí, Česká republika",
         videoId: "IApLOlmcf_o",
-        audioUrl: "../assets/audio/uvody/uvod.mp3"
+        audioUrl: "assets/audio/uvody/uvod.mp3"
     },
     // ??? SLIDE 2: CHAPTER ?????????????????????????????????????????
     {
@@ -35,7 +35,7 @@ window.GAME_SLIDES = [
         chapterNum: 1,
         chapterTitle: "PRVNÍ SPIS",
         videoId: "eV3kr5du18w",
-        audioUrl: "../assets/audio/uvody/uvod1.mp3",
+        audioUrl: "assets/audio/uvody/uvod1.mp3",
         warning: "Nejprve shlédni úvodní video, teprve pak otevři první spis.",
         buttonText: "Otevřít spis"
     },
@@ -106,7 +106,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 6,
         videoId: "IApLOlmcf_o",
-        audioUrl: "../assets/audio/uvody/zaver1.mp3",
+        audioUrl: "assets/audio/uvody/zaver1.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 7: CHAPTER ?????????????????????????????????????????
@@ -116,7 +116,7 @@ window.GAME_SLIDES = [
         chapterNum: 2,
         chapterTitle: "DRUHÝ SPIS",
         videoId: "IApLOlmcf_o",
-        audioUrl: "../assets/audio/uvody/uvod2.mp3",
+        audioUrl: "assets/audio/uvody/uvod2.mp3",
         warning: "Druhý spis zatím neotevírej. Shlédni úvodní video a pak si poslechni vzkaz historika Tomáše Havelky.",
         buttonText: "Máte neposlechnutý vzkaz od Tomáše Havelky!"
     },
@@ -124,7 +124,7 @@ window.GAME_SLIDES = [
     {
         type: "audio",
         id: 8,
-        audioUrl: "../assets/audio/Havelka2.mp3",
+        audioUrl: "assets/audio/Havelka2.mp3",
         infoText: "Nyní otevři spis a pokračuj v pátrání.",
         buttonText: "Otevřít spis"
     },
@@ -188,7 +188,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 12,
         videoId: "8r_u_j_8Bzg",
-        audioUrl: "../assets/audio/uvody/zaver2.mp3",
+        audioUrl: "assets/audio/uvody/zaver2.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 13: CHAPTER ?????????????????????????????????????????
@@ -198,7 +198,7 @@ window.GAME_SLIDES = [
         chapterNum: 3,
         chapterTitle: "TŘETÍ SPIS",
         videoId: "IApLOlmcf_o",
-        audioUrl: "../assets/audio/uvody/uvod3.mp3",
+        audioUrl: "assets/audio/uvody/uvod3.mp3",
         warning: "Třetí spis zatím neotevírej. Shlédni úvodní video a pak si poslechni vzkaz historika Tomáše Havelky.",
         buttonText: "Máte neposlechnutý vzkaz od Tomáše Havelky!"
     },
@@ -206,7 +206,7 @@ window.GAME_SLIDES = [
     {
         type: "audio",
         id: 14,
-        audioUrl: "../assets/audio/Havelka3.mp3",
+        audioUrl: "assets/audio/Havelka3.mp3",
         infoText: "Nyní otevři spis a pokračuj v pátrání.",
         buttonText: "Otevřít spis"
     },
@@ -297,7 +297,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 19,
         videoId: "eV3kr5du18w",
-        audioUrl: "../assets/audio/uvody/zaver3.mp3",
+        audioUrl: "assets/audio/uvody/zaver3.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 20: CHAPTER ?????????????????????????????????????????
@@ -307,7 +307,7 @@ window.GAME_SLIDES = [
         chapterNum: 4,
         chapterTitle: "ČTVRTÝ SPIS",
         videoId: "o3duATBwCSw",
-        audioUrl: "../assets/audio/uvody/uvod4.mp3",
+        audioUrl: "assets/audio/uvody/uvod4.mp3",
         warning: "Čtvrtý spis zatím neotevírej. Shlédni úvodní video a pak si poslechni vzkaz historika Tomáše Havelky.",
         buttonText: "Máte neposlechnutý vzkaz od Tomáše Havelky!"
     },
@@ -315,7 +315,7 @@ window.GAME_SLIDES = [
     {
         type: "audio",
         id: 21,
-        audioUrl: "../assets/audio/Havelka4.mp3",
+        audioUrl: "assets/audio/Havelka4.mp3",
         infoText: "Nyní otevři spis a pokračuj v pátrání.",
         buttonText: "Otevřít spis"
     },
@@ -413,7 +413,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 26,
-        audioUrl: "../assets/audio/mezi/mezi4.mp3",
+        audioUrl: "assets/audio/mezi/mezi4.mp3",
         text: "Detektive,\n\nještě jedna věc. Ten rodný list Jakuba Dvořáka je opravdu zajímavý. Chtělo by to o jeho původu zjistit trochu víc. Nemám teď čas, zkus napsat na analytické oddělení, zda by ti nezpracovali rešerši ze starých archivních dokumentů. Do mailu stačí napsat: „Prověřit rodný list Jakuba Dvořáka.\"",
         hints: {
             textHints: [
@@ -456,7 +456,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 28,
         videoId: "mvlA1m8-Jqs",
-        audioUrl: "../assets/audio/uvody/zaver4.mp3",
+        audioUrl: "assets/audio/uvody/zaver4.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 29: CHAPTER ?????????????????????????????????????????
@@ -466,7 +466,7 @@ window.GAME_SLIDES = [
         chapterNum: 5,
         chapterTitle: "PÁTÝ SPIS",
         videoId: "8r_u_j_8Bzg",
-        audioUrl: "../assets/audio/uvody/uvod5.mp3",
+        audioUrl: "assets/audio/uvody/uvod5.mp3",
         warning: "Pátý spis zatím neotevírej. Shlédni úvodní video a pak si poslechni vzkaz historika Tomáše Havelky.",
         buttonText: "Máte neposlechnutý vzkaz od Tomáše Havelky!"
     },
@@ -474,7 +474,7 @@ window.GAME_SLIDES = [
     {
         type: "audio",
         id: 30,
-        audioUrl: "../assets/audio/Havelka5.mp3",
+        audioUrl: "assets/audio/Havelka5.mp3",
         infoText: "Nyní otevři spis a pokračuj v pátrání.",
         buttonText: "Otevřít spis"
     },
@@ -555,7 +555,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 34,
-        audioUrl: "../assets/audio/mezi/mezi5.mp3",
+        audioUrl: "assets/audio/mezi/mezi5.mp3",
         text: "Děkuji za tvou zprávu, detektive. Jdeš na to dobře. Kdo by to řekl, že heslo k flashce ti prozradí přívěšek na klíčích, na který se už dávno zapomnělo.\n\nCo je ale důležitější, je to, že vrah Jakuba i faráře je zřejmě ve spojení s Machovými. Jde jen o to přijít na to, jak moc o tom Machovi vědí.\n\nMusím teď na kobereček k šéfovi. Chce se mnou řešit, odkud prosakují informace o vraždách v Podlesí na veřejnost, a tak se na tu flashku nemám čas podívat. Každopádně jsem ti její obsah nasdílel. Můžeš se na to podívat ty?\n\nDíky. Ozvu se, jak to půjde.",
         link: {
             url: "https://drive.google.com/drive/folders/1kg-McevPge6wfLwh6kDiYlqXF-mRzXVC?usp=drive_link",
@@ -587,7 +587,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 36,
         videoId: "IApLOlmcf_o",
-        audioUrl: "../assets/audio/uvody/zaver5.mp3",
+        audioUrl: "assets/audio/uvody/zaver5.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 37: CHAPTER ?????????????????????????????????????????
@@ -597,7 +597,7 @@ window.GAME_SLIDES = [
         chapterNum: 6,
         chapterTitle: "ŠESTÝ SPIS",
         videoId: "eV3kr5du18w",
-        audioUrl: "../assets/audio/uvody/uvod6.mp3",
+        audioUrl: "assets/audio/uvody/uvod6.mp3",
         warning: "Nejprve shlédni úvodní video, teprve pak otevři šestý spis.",
         buttonText: "Otevřít spis"
     },
@@ -678,8 +678,8 @@ window.GAME_SLIDES = [
             "Filipa Procházku": "Rozhodl ses stíhat Filipa Procházku. Bylo to skutečně správné rozhodnutí? Přišly nám hotelové logy z hotelu, ve kterém se ubytoval Tomáš Havelka. Mrkni na ně a pak mi dej vědět, jestli má Havelka alibi."
         },
         conditionalAudioUrls: {
-            "Tomáše Havelku": "../assets/audio/mezi/mezi61.mp3",
-            "Filipa Procházku": "../assets/audio/mezi/mezi61.mp3"
+            "Tomáše Havelku": "assets/audio/mezi/mezi61.mp3",
+            "Filipa Procházku": "assets/audio/mezi/mezi61.mp3"
         },
         link: {
             url: "https://drive.google.com/drive/folders/1-ynrbmy-PDGpO4RkHsi4s9QjCNVrs8GH?usp=drive_link",
@@ -706,7 +706,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 44,
-        audioUrl: "../assets/audio/mezi/mezilog.mp3",
+        audioUrl: "assets/audio/mezi/mezilog.mp3",
         text: "Havelka byl podle hotelových logů skutečně na hotelu. Ale stačí to? Pro jistotu jsme kontaktovali i jeho asistentku, aby nám potvrdila jeho alibi.\n\n„Dobrý den, slečno Náhlíková, tady nadporučík Vávra. Volám vám ohledně potvrzení alibi Tomáše Havelky. Jde nám zejména o to, zda víte, kde se nacházel ihned po skončení přednášky v Měšťanské besedě. Prověřili jsme logy jeho pokoje 307, takže tohle už je jen formalita.\"\n\n„Dobrý den, pane nadporučíku. Jestli si dobře vzpomínám, tak autogramiáda skončila po 19. hodině. Pan Havelka se cítil unaven a tak si objednal taxi a kolem tři čtvrtě na osm odjel do hotelu. Já měla ještě nějaké administrativní povinnosti v budově, a tak jsem vyrazila o něco později. Ale na hotelu jsem byla něco před devátou.\"\n\n„Psala jsem panu Havelkovi a on mi potvrdil, že už se chystá ke spánku. Ráno jsme se už kolem osmé sešli na snídani. Takže ano, určitě byl na hotelu.\"\n\n— Ale nebyla jste přímo s ním?\n\n„No, nebyla.\"\n\n— Dobře. Děkuji vám za informaci.\n\n„Počkejte ještě. Vy jste říkal logy pokoje 307?\"\n\n— Ano, přístupy do pokoje Tomáše Havelky.\n\n„Tady muselo dojít k omylu. Pokoj 307 je můj. Pan Havelka je ubytovaný vedle. Na pokoji 305.\"\n\n— Děkuji vám, slečno."
     },
     // ??? SLIDE 45: OT?ZKA TYP 1 ?????????????????????????????????????????
@@ -794,7 +794,7 @@ window.GAME_SLIDES = [
         type: "conclusion",
         id: 50,
         videoId: "o3duATBwCSw",
-        audioUrl: "../assets/audio/uvody/zaver.mp3",
+        audioUrl: "assets/audio/uvody/zaver.mp3",
         hideConclusionDetail: true,
     },
     // ??? SLIDE 51: INTRO ?????????????????????????????????????????
@@ -807,7 +807,7 @@ window.GAME_SLIDES = [
         classification: "Přísně tajné",
         location: "Praha 10, Česká republika",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod.mp3"
+        audioUrl: "assets/audio2/uvody/uvod.mp3"
     },
     // ??? SLIDE 52: CHAPTER ?????????????????????????????????????????
     {
@@ -816,7 +816,7 @@ window.GAME_SLIDES = [
         chapterNum: 1,
         chapterTitle: "PRVNÍ SPIS",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod1.mp3",
+        audioUrl: "assets/audio2/uvody/uvod1.mp3",
         warning: "Nejprve shlédni úvodní video, teprve pak otevři první spis.",
         buttonText: "Otevřít spis"
     },
@@ -908,7 +908,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 57,
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/zaver1.mp3",
+        audioUrl: "assets/audio2/uvody/zaver1.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 58: CHAPTER ?????????????????????????????????????????
@@ -918,7 +918,7 @@ window.GAME_SLIDES = [
         chapterNum: 2,
         chapterTitle: "DRUHÝ SPIS",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod2.mp3",
+        audioUrl: "assets/audio2/uvody/uvod2.mp3",
         warning: "Shlédni úvodní video a pak otevři spis.",
         buttonText: "Otevřít spis"
     },
@@ -1047,7 +1047,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 66,
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/zaver2.mp3",
+        audioUrl: "assets/audio2/uvody/zaver2.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 67: CHAPTER ?????????????????????????????????????????
@@ -1057,7 +1057,7 @@ window.GAME_SLIDES = [
         chapterNum: 3,
         chapterTitle: "TŘETÍ SPIS",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod3.mp3",
+        audioUrl: "assets/audio2/uvody/uvod3.mp3",
         warning: "Shlédni úvodní video, otevři spis, prozkoumej pitevní protokol a protokol o ohledání místa činu a pak si poslechni vzkaz od patologa.",
         buttonText: "Máte neposlechnutý vzkaz od patologa Čáslavy"
     },
@@ -1065,7 +1065,7 @@ window.GAME_SLIDES = [
     {
         type: "audio",
         id: 68,
-        audioUrl: "../assets/audio2/patolog1.mp3",
+        audioUrl: "assets/audio2/patolog1.mp3",
         listenButtonText: "Poslechnout vzkaz od patologa Čáslavy",
         infoText: "Nyní pokračuj v prostudování třetího spisu.",
         buttonText: "Pokračovat"
@@ -1182,7 +1182,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 75,
-        audioUrl: "../assets/audio2/mezi/mezi3.mp3",
+        audioUrl: "assets/audio2/mezi/mezi3.mp3",
         text: "No výborně, detektive. Spojení mezi Havlem a Pospíšilem skrze základní školu je očividné. Jakto, že nás to jen nenapadlo? Kontaktovali jsme Základní školu U Grébovky, kterou oba navštěvovali. Ředitel sice nebyl přítomen, ale zástupce slíbil, že se nám ozve. Zatím nám jeho sekretariát nasdílel některé velmi zajímavé dokumenty. Mrkneš se na ně? Posílám ti odkaz.",
         link: {
             url: "https://drive.google.com/drive/folders/1bT5eUI-EUob8zq1iIE2Pa0rFrURT30ig?usp=drive_link",
@@ -1232,7 +1232,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 78,
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/zaver3.mp3",
+        audioUrl: "assets/audio2/uvody/zaver3.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 79: CHAPTER ?????????????????????????????????????????
@@ -1242,7 +1242,7 @@ window.GAME_SLIDES = [
         chapterNum: 4,
         chapterTitle: "ČTVRTÝ SPIS",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod4.mp3",
+        audioUrl: "assets/audio2/uvody/uvod4.mp3",
         warning: "Shlédni úvodní video, poslechni si vzkaz od ředitele Svobody a teprve pak otevři spis.",
         buttonText: "Máte neposlechnutý vzkaz od ředitele Svobody"
     },
@@ -1250,7 +1250,7 @@ window.GAME_SLIDES = [
     {
         type: "audio",
         id: 80,
-        audioUrl: "../assets/audio2/reditel.mp3",
+        audioUrl: "assets/audio2/reditel.mp3",
         listenButtonText: "Poslechnout vzkaz od ředitele Svobody",
         infoText: "Nyní otevři spis a pokračuj v pátrání.",
         buttonText: "Otevřít spis"
@@ -1281,7 +1281,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 82,
-        audioUrl: "../assets/audio2/mezi/mezi4.mp3",
+        audioUrl: "assets/audio2/mezi/mezi4.mp3",
         text: "No výborně. Takže teď máme potvrzeno, že to musí související s Annou Zlámalovou. Teď nám jde o to, zda Anežku Procházkovou, spolužačku Josefa Pospíšila a Lukáše Havla, můžeme považovat za podezřelou, nebo spíš za ohroženou. Prověř tu pevnou linku, která volala jak Josefu Pospíšilovi, tak i Lukáši Havlovi. Třeba z toho dostaneme nějaké užitečné informace.",
         hints: {
             textHints: [],
@@ -1347,7 +1347,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 87,
-        audioUrl: "../assets/audio2/mezi/mezi42.mp3",
+        audioUrl: "assets/audio2/mezi/mezi42.mp3",
         text: "No super. Ano. Skutečně. Taky jsem tam v pozadí toho hovoru něco slyšel. Poslal jsem ten hovor na analýzu a oni mi ten zvuk vytáhli a vyčistili. Poslechni si ho. Co to děláš, Aleši? Nějaká žena tam někoho oslovuje. Do toho bytu se budeme muset co nejdříve podívat. Teď mi ale ještě prověř znovu to telefonní číslo, ze kterého přišlo Anežce Procházkové, že se představení Nemesis ruší. Je to stejné číslo, které volalo v den smrti Josefa Pospíšila Barboře Hladíkové. Tak to nesmíme podcenit. Nezapomeň dát za číslo písmeno \"n\", ať se ti zobrazí aktualizovaný výpis hovorů.",
         hints: {
             textHints: [],
@@ -1374,7 +1374,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 89,
-        audioUrl: "../assets/audio2/mezi/mezi43.mp3",
+        audioUrl: "assets/audio2/mezi/mezi43.mp3",
         text: "Detektive, ten rozhovor mezi Pospíšilovou a Staňkem byl trochu zvláštní. Ona ho blokuje? Mluvili i o penězích a o firmě. Zkus prověřit firmu Pospíšil a dej vědět, jestli nenajdeš něco zajímavého.",
         hints: {
             textHints: [],
@@ -1402,7 +1402,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 91,
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/zaver4.mp3",
+        audioUrl: "assets/audio2/uvody/zaver4.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 92: CHAPTER ?????????????????????????????????????????
@@ -1412,7 +1412,7 @@ window.GAME_SLIDES = [
         chapterNum: 5,
         chapterTitle: "PÁTÝ SPIS",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod5.mp3",
+        audioUrl: "assets/audio2/uvody/uvod5.mp3",
         warning: "Shlédni úvodní video a pak otevři spis.",
         buttonText: "Otevřít spis"
     },
@@ -1552,7 +1552,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 101,
-        audioUrl: "../assets/audio2/mezi/mezi51.mp3",
+        audioUrl: "assets/audio2/mezi/mezi51.mp3",
         text: "Prosím tě, detektive. Nemám teď čas. Napiš na odbor kriminalistické techniky a expertíz, zda už mají hotové ty rozbory. Je to pro nás důležité. Stačí napsat: \"Máte výsledky rozborů z bytu Tůmové?\". Obdržel jsem výsledky rozborů z bytu Tůmové.",
         buttonText: "Obdržel jsem výsledky rozborů z bytu Tůmové",
         hints: {
@@ -1564,10 +1564,10 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 102,
-        audioUrl: "../assets/audio2/mezi/mezi52.mp3",
+        audioUrl: "assets/audio2/mezi/mezi52.mp3",
         extraAudioMessages: [
             {
-                audioUrl: "../assets/audio2/patolog2.mp3",
+                audioUrl: "assets/audio2/patolog2.mp3",
                 listenButtonText: "Poslechnout vzkaz od patologa Čáslavy"
             }
         ],
@@ -1602,7 +1602,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 104,
-        audioUrl: "../assets/audio2/mezi/mezi53.mp3",
+        audioUrl: "assets/audio2/mezi/mezi53.mp3",
         text: "Detektive, přišly nám výsledky exhumace. A myslím, že se budeš divit. Prostuduj si je. Opět jsem ti je nasdílel.",
         link: {
             url: "https://drive.google.com/file/d/1_QjkRVkprQlxnVaho9KJ_mSKjEOIhNMy/view?usp=drive_link",
@@ -1630,7 +1630,7 @@ window.GAME_SLIDES = [
         type: "video",
         id: 106,
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/zaver5.mp3",
+        audioUrl: "assets/audio2/uvody/zaver5.mp3",
         buttonText: "Pokračovat"
     },
     // ??? SLIDE 107: CHAPTER ?????????????????????????????????????????
@@ -1640,7 +1640,7 @@ window.GAME_SLIDES = [
         chapterNum: 6,
         chapterTitle: "ŠESTÁ KAPITOLA",
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/uvod6.mp3",
+        audioUrl: "assets/audio2/uvody/uvod6.mp3",
         warning: "Shlédni úvodní video a pak otevři spis.",
         buttonText: "Otevřít spis"
     },
@@ -1660,7 +1660,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 109,
-        audioUrl: "../assets/audio2/mezi/mezi61.mp3",
+        audioUrl: "assets/audio2/mezi/mezi61.mp3",
         text: "Záznam hovoru s Anežkou Procházkovou: Oddělení kriminality a vyšetřování - Územní odbor pro Prahu III. \"Dobrý den, tady Anežka Procházková, potřebuji mluvit s kapitánem Vančurou.\" \"U telefonu.\" \"To jsem ráda, pane kapitáne. Něco se stalo, já nevím, co mám dělat.\" \"Uklidněte se, slečno Procházková, a řekněte mi v klidu, co se děje.\" \"Přišel mi email o tom, že moje dcery kradly v obchodě. A je v něm QR kód. Jestli prý chci vidět jejich kamerové záznamy, mám si ho rozkliknout. Je to celý hrozně divný. Bojím se.\" \"Slečno Procházková, okamžitě nám ten QR kód přepošlete.\" \"Jistě, pane kapitáne.\" \"A teď mě dobře poslouchejte. Za žádných, ale za žádných okolností ten QR kód neotevírejte.\" \"Rozumím.\" \"Ozveme se vám, jakmile budeme něco vědět.\" To, co jsi právě slyšel, je záznam rozhovoru s Anežkou Procházkovou. Zdá se, že věc ještě není u konce. Podívej se hned na ten QR kód a zjisti, zda už nejsme schopni odhalit, co ta poslední část, která byla ve všech třech QR kódech, skrývá. Tady je totiž něco navíc.",
         link: {
             url: "https://drive.google.com/file/d/105bZHt9BRvbpn8du2H9y_iXHDZ4Ngo78/view?usp=drive_link",
@@ -1692,7 +1692,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 111,
-        audioUrl: "../assets/audio2/mezi/mezi62.mp3",
+        audioUrl: "assets/audio2/mezi/mezi62.mp3",
         text: "Takže jsme byli na správné stopě. Jedná se o rodiče, který se mstí za vraždu své dcery. Jenže Aleše Zlámala, otce Anny, jsme zadrželi a v současnosti sedí v naší zadržovací cele. Tak to tak úplně nedává smysl. Leda…leda že by vrahem byla Annina matka.",
         link: {
             url: "https://drive.google.com/file/d/1KmRSMHKBAmflEe_gzFFZvGhJ6K5HZYTZ/view?usp=drive_link",
@@ -1725,7 +1725,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 113,
-        audioUrl: "../assets/audio2/mezi/mezi63.mp3",
+        audioUrl: "assets/audio2/mezi/mezi63.mp3",
         text: "Ano, tohle začíná dávat smysl. Barbora Hladíková jako matka Anny Zlámalové a zároveň mstitel, který trestá provinilce za její smrt. Navíc to byla ona, kdo oznámil nález obou těl. Zpočátku jsme ji podezřívali, ale její výkon byl tak přesvědčivý. Ale prořekla se, že jí bylo padesát zrovna v den, kdy zabili Josefa Pospíšila. Tohle ale samo o sobě nestačí. Musíme lokalizovat signál jejího mobilu v době obou vražd. Pojďme to postupně prověřit. Heslo je KRIMI1628.",
         hints: {
             textHints: [],
@@ -1864,7 +1864,7 @@ window.GAME_SLIDES = [
     {
         type: "interlude",
         id: 123,
-        audioUrl: "../assets/audio2/mezi/mezi64.mp3",
+        audioUrl: "assets/audio2/mezi/mezi64.mp3",
         text: "Detektive, je to v háji. Podívej se, co mi právě přišlo za upozornění. K otevření SMS došlo v 17:06 v mobilním telefonu Anežky Procházkové. K načtení QR kódu ze stejného mobilního telefonu došlo v 17:55. Takže Anežka Procházková i přes naše rady ten QR kód otevřela. Tohle je boj s časem. Hladíková už je určitě na místě. Dej pokyn a vyrážíme.",
         noticeText: "1) K otevření emailu došlo v 17:06 v mobilním telefonu Anežky Procházkové.\n\n2) K načtení QR kódu ze stejného mobilního telefonu došlo v 17:55.",
         buttonText: "DÁT POKYN!",
@@ -1878,8 +1878,8 @@ window.GAME_SLIDES = [
         type: "conclusion",
         id: 124,
         videoId: "LmaG4d0O9Gg",
-        audioUrl: "../assets/audio2/uvody/zaver6.mp3",
-        songAudioUrl: "../assets/audio2/zivotmuj.mp3",
+        audioUrl: "assets/audio2/uvody/zaver6.mp3",
+        songAudioUrl: "assets/audio2/zivotmuj.mp3",
         songButtonText: "Poslechnout - Josef Pospíšil: Život můj"
     }
 ];
